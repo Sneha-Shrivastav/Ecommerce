@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button id="homeButton">Home</button>
+        <button id="signupButton">Signup</button>
+        <button id="loginButton">Login</button>
+    </nav>
+
+    <main class="main-content">
+        <div id="homeContent" class="content">
+            <h1>Welcome! click on Home button to see Products</h1>
+            <p>Browse our products, sign up, or log in to get started.</p>
+        </div>
+
+        <div id="signupFormContainer" class="content" style="display:none;">
+            <h2>Signup</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" required>
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileImage">profile Image URL:</label>
+                    <input type="text" id="profileImage" name="profileImage" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address (JSON format):</label>
+                    <textarea id="address" name="address" ></textarea>
+                </div>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+
+        <div id="loginFormContainer" class="content" style="display:none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <section id="products" class="content" style="display:none;">
+            <h2>Products</h2>
+            <div id="productsList"></div>
+            <div id="message" class="alert" style="display:none;"></div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <p>&copy; 2024 Interactive App. All rights reserved.</p>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

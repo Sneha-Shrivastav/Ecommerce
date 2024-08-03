@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="signup.html">Sign Up</a> |
+            <a href="login.html">Login</a> |
+            <a href="#" id="logout">Logout</a> |
+            <a href="admin_home.html">Admin Panel</a>
+        </nav>
+
+        <div id="message" class="alert" style="display: none;"></div>
+
+        <h2>Add Product</h2>
+        <form id="add-product-form">
+            <div>
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+            <div>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <div>
+                <label for="productImage">Image URL:</label>
+                <input type="text" id="productImage" name="productImage" required>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+            </div>
+            <div>
+                <label for="isDeleted">Is Deleted:</label>
+                <input type="checkbox" id="isDeleted" name="isDeleted">
+            </div>
+            <button type="submit">Add Product</button>
+        </form>
+
+     
+        <h2>Update Product</h2>
+        <form id="update-product-form">
+            <div>
+                <label for="update-id">Product ID:</label>
+                <input type="text" id="update-id" name="id" required>
+            </div>
+            <div>
+                <label for="update-title">Title:</label>
+                <input type="text" id="update-title" name="title">
+            </div>
+            <div>
+                <label for="update-description">Description:</label>
+                <textarea id="update-description" name="description"></textarea>
+            </div>
+            <div>
+                <label for="update-price">Price:</label>
+                <input type="number" id="update-price" name="price" step="0.01">
+            </div>
+            <div>
+                <label for="update-image">Image URL:</label>
+                <input type="text" id="update-image" name="productImage">
+            </div>
+            <div>
+                <label for="update-category">Category:</label>
+                <input type="text" id="update-category" name="category">
+            </div>
+            <div>
+                <label for="update-isDeleted">Is Deleted:</label>
+                <input type="checkbox" id="update-isDeleted" name="isDeleted">
+            </div>
+            <button type="submit">Update Product</button>
+        </form>
+
+        
+        <h2>Delete Product</h2>
+        <form id="delete-product-form">
+            <div>
+                <label for="delete-id">Product ID:</label>
+                <input type="text" id="delete-id" name="id" required>
+            </div>
+            <button type="submit">Delete Product</button>
+        </form>
+
+      
+        <h2>All Orders</h2>
+        <button id="get-all-orders-button">Get All Orders</button>
+        <div id="orders-list"></div>
+
+      
+        <h2>Update Order Status</h2>
+        <form id="update-order-status-form">
+            <div>
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="id" required>
+            </div>
+            <div>
+                <label for="order-status">Status:</label>
+                <input type="text" id="order-status" name="status" required>
+            </div>
+            <button type="submit">Update Status</button>
+        </form>
+
+        
+        <div id="message" style="display: none;"></div>
+    </div>
+
+    <footer>
+        <p>© 2024 Ecommerce. All rights reserved.</p>
+    </footer>
+
+    <script src="js/admin_home.js"></script>
+</body>
+</html>
