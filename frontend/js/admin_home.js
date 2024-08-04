@@ -1,4 +1,17 @@
-const API_URL = 'http://localhost:3000';
+let API_URL = '';
+
+async function fetchApiUrl() {
+    try {
+        const response = await fetch('/api/env');
+        if (!response.ok) {
+            throw new Error('Failed to fetch API configuration');
+        }
+        const config = await response.json();
+        API_URL = config.API_URL; 
+    } catch (error) {
+        console.error('Error fetching API URL:', error);
+    }
+}
 
 
 document.getElementById('add-product-form').addEventListener('submit', async (event) => {

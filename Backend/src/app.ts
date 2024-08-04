@@ -37,6 +37,10 @@ app.get('/health', async (req: Request, res: Response): Promise<Response> => {
 
 const port = process.env.PORT || 3000;
 
+app.get('/api/config', (req: Request, res: Response) => {
+    res.json({ apiUrl: `http://localhost:${port}` });
+});
+
 const startServer = async () => {
     try {
         await sequelize.authenticate();
